@@ -7,11 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.Encoder;
 
-public class MainFrame extends JFrame{
-    public MainFrame(){
+public class ImageFrame extends JFrame{
+    public ImageFrame(){
         setTitle("Image Steganograph");
         setSize(500,500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null); // center window in center
 
         JPanel panel = new JPanel();
@@ -48,7 +48,7 @@ public class MainFrame extends JFrame{
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new MainFrame();  // Create a new MainFrame instance using Event Dispatch Thread
+                new ImageFrame();  // Create a new MainFrame instance using Event Dispatch Thread
             }
         });
         
